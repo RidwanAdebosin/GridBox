@@ -1,0 +1,39 @@
+.wrapper {
+  background-color: rgba(218, 112, 214, 0.482);
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.navBar {
+  width: 100%;
+  height: 20vh;
+  background: #ff9900;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.sidebar {
+  background: #ff9900;
+  width: 35%;
+  height: 58vh;
+}
+
+.main {
+  background: #ff9900;
+  width: 65%;
+  height: 58vh;
+}
+
+div {
+  text-align: center;
+}
