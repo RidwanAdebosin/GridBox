@@ -36,14 +36,14 @@ h3, h5{
 main{
     border: 2px solid black;
     height: auto;
-    background: goldenrod;
+    background: rgb(247, 178, 4);
     border-radius: 7px;
     padding: 10px;
 
 }
 
 article{
-    border: 4px solid darkred;
+    border: 3px solid darkred;
     border-radius: 7px;
     background: skyblue;
     margin-block-end: 10px;
@@ -60,41 +60,44 @@ article{
 
 .text{
     border: 2px solid black;
-    background: gray;
+    background: rgb(194, 179, 179);
     width: 80%;
+    height: 30px;
     border-radius: 5px;
 }
 
 .img{
     border: 2px solid black;
-    background: rebeccapurple;
+    background: purple;
     width: 80%;
+    height: 30px;
     border-radius: 5px; 
 }
 
 article .a-box{
     border: 2px solid black;
-    background: orangered;
+    background: rgb(248, 102, 49);
     width: 80%;
     border-radius: 5px;
     padding: 3px;
+    padding-top: 25px;
 }
 
 .text-input{
     border: 2px solid black;
     padding: 4px;
     width: 80%;
-    background: lawngreen;
+    background: rgb(165, 245, 84);
     border-radius: 5px;
     margin: 0 auto;
 
 }
 
 aside{
-    border: 4px solid darkred;
+    border: 3px solid darkred;
     border-radius: 7px;
     background: skyblue;
-    margin-block-end: 10px;
+    margin-block-end: 15px;
 }
 
 aside .img{
