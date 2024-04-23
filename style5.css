@@ -1,0 +1,104 @@
+body{
+    font: 1em sans-serif;
+    font-weight: bold;
+    }
+    
+    .grid-box{
+    background-color: #F0E8F7;
+    width: 70%;
+    height: auto;
+    margin: 40px auto;
+    padding: 10px;
+    border-radius: 5px;
+    }
+    
+    .header{
+        height: auto;
+        padding: 5px;
+        border-radius: 5px;
+        margin-block-end: 5px;
+    
+    }
+    
+    .title-box{
+        background: #DED1EF;
+        height: 40px;
+        border-radius: 5px;
+        margin-block-end: 5px;
+        text-align: center;
+        line-height:40px ;
+    }
+    
+    .nav-bar{
+      padding: 5px;
+        border-radius: 5px;
+        height: 15px;
+        background: #FEF2B6;
+        text-align: center;
+        line-height: 15px;
+    }
+    
+    .section{
+        display: flex;
+        gap: 10px;
+        margin-block-end: 5px;
+    }
+    
+    .aside{
+        background: #DED1EF;
+        height: 52vh;
+        width: 100px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 41.5vh;
+    }
+    
+    main{
+        padding: 5px;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 70%;
+        height: auto;
+        background: #DED1EF;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+    
+    main .article-wrapper{
+        border: 3px solid #AE8DDC;
+        padding: 10px;
+        border-radius: 5px;
+        margin-block-end: 3px;
+    }
+
+    article{
+        border: 3px solid #AE8DDC;
+        height: 10vh;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 12vh;
+    }
+
+    article:first-child{
+        margin-block-end: 5px;
+    }
+
+    .last-article{
+        border: 3px solid #AE8DDC;
+        padding: 10px;
+        border-radius: 5px;
+        margin-block-end: 3px;
+    }
+    
+    footer{
+        background: #DED1EF;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+    }
