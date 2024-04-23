@@ -41,7 +41,7 @@ body{
     .section{
         display: flex;
         gap: 10px;
-        margin-block-end: 5px;
+        margin-block-end: 10px;
     }
     
     .aside{
@@ -58,7 +58,7 @@ body{
         padding-top: 20px;
         padding-left: 15px;
         padding-right: 15px;
-        width: 70%;
+        width: 100%;
         height: auto;
         background: #DED1EF;
         border-radius: 5px;
