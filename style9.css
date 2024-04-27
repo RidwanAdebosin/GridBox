@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.main-container{
+    width: 80%;
+    margin: 70px auto;
+    color: red;
+    text-align: center;
+    height: auto;
+}
+
+.topBar{
+    display: flex;
+}
+
+header{
+    width: 30%;
+    background-color: #0F1629;
+    padding: 20px;
+    color: white;
+}
+
+nav{
+    width: 70%;
+    background-color: #EE3D4E;
+    padding: 20px;
+    color: white;
+}
+
+section{
+    width: 100%;
+    height: 150px;
+    background-color: #4C85C8;
+    line-height: 150PX;
+    color: white;
+}
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+}
+
+.leftContainer{
+    width: 50%;
+    height: 100%;
+    background: #25354C;
+    text-align: center;
+    line-height: 120px;
+}
+
+.rightContainer{
+    width: 50%;
+    height: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flexRightContainer:first-child{
+    text-align: center;
+    line-height: 120px;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    line-height: 60px;
+    background: #C2E3E8;
+    color: #000;
+}
+
+.extraContainer{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    line-height: 60px;
+    background: #4EBC97;
+    color: #000;
+}
+
+footer{
+   background: #FED269; 
+   height: 50PX;
+   text-align: center;
+    line-height: 50px;
+    color: #000;
+    width: 100%;
+}
+
+/* Mobile view */
+
+@media (max-width:600px) {
+    .main-container{
+        /* border: 5px solid red; */
+        height: auto;
+    }
+
+    .topBar{
+        display: grid;
+    }
+
+    nav, header{
+        width: 100%;
+    }
+
+    article{
+        display: grid;
+    }
+
+    .leftContainer{
+        width: 100%;
+    }
+
+    .rightContainer{
+        /* display: grid; */
+        width: 100%;
+    }
+
+    .whiteContainer{
+        display: none;
+    }
+
+    .flexRightContainer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imgContainer, .extraContainer{
+        width: 200%;
+        height: 200%;
+        
+    }
+    footer{
+        order: -2;
+    }
+}
