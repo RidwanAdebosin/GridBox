@@ -14,7 +14,7 @@ body{
     margin: 70px auto;
     color: red;
     text-align: center;
-    height: auto;
+    height: auto;    
 }
 
 .topBar{
@@ -87,6 +87,10 @@ article{
     color: #000;
 }
 
+article nav{
+    display: none;
+}
+
 footer{
    background: #FED269; 
    height: 50PX;
@@ -98,10 +102,9 @@ footer{
 
 /* Mobile view */
 
-@media (max-width:600px) {
+/* @media (max-width:480px) {
     .main-container{
-        /* border: 5px solid red; */
-        height: auto;
+        height: 100vh;
     }
 
     .topBar{
@@ -116,12 +119,14 @@ footer{
         display: grid;
     }
 
+  
+
     .leftContainer{
         width: 100%;
+        order: -2;
     }
 
     .rightContainer{
-        /* display: grid; */
         width: 100%;
     }
 
@@ -142,4 +147,72 @@ footer{
     footer{
         order: -2;
     }
-}
+} */
+
+/* Tablet view responsiveness */
+ @media (max-width: 768px) {
+  
+
+    header{
+        width: 100%;
+    }
+
+    .topBar nav{
+        display: none;
+    }
+
+    .whiteContainer{
+        display: none;
+    }
+
+    article{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    article nav{
+         display: inline-block;
+         width: 100%;
+         height: 50vh;
+        }
+        
+        .bar{
+            height: 50vh;
+            display: grid;
+        }
+
+        .leftContainer{
+            width: 100%;
+            height: 25vh;
+            order: -2;
+        }
+
+        .rightContainer{
+            width: 100%;
+            height: 12.5vh;
+            grid-template-columns: 100% 0px;
+        }
+
+        .flexRightContainer{
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+        }
+        
+        .imgContainer{
+            height: 12.5vh;
+            width: 70%;
+        }
+
+        .extraContainer{
+            height: 12.5vh;
+        }
+      
+        footer{
+            height: 12.5vh;
+            width: 100%;
+            order: -2;
+        }
+
+
+}  
