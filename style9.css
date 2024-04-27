@@ -177,29 +177,44 @@ footer{
         width: 100%;
     }
 
-    .topBar{
-        display: grid;
+    header{
+        width: 100%;
     }
 
+    .topBar{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header{
+        width: 100%;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    
     .topBar nav{
         display: block;
-        width: 100%;
     }
 
     section{
         height: 15vh;
         line-height: 15vh;
+        width: 100%;
     }
 
     article{
         display: flex;
         flex-direction: column;
         grid-template-rows: 1fr;
+        width: 100%;
     }
 
     .bar{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
      article nav{
@@ -218,13 +233,16 @@ footer{
 
     .extraContainer{
         height: 12vh;
+        width: 100%;
     }
 
     footer{
         height: 12vh;
+        width: 100%;
     }
 
     .leftContainer{
         height: 15vh;
+        width: 100%;
     }
 } 
