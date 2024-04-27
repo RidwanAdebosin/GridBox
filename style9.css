@@ -43,11 +43,9 @@ section{
     color: white;
 }
 
-article{
+ .mainWrapper{
     display: flex;
-    flex-wrap: wrap;
-    height: 120px;
-}
+} 
 
 .leftContainer{
     width: 50%;
@@ -55,6 +53,7 @@ article{
     background: #25354C;
     text-align: center;
     line-height: 120px;
+    float: left;
 }
 
 .rightContainer{
@@ -99,55 +98,6 @@ footer{
     color: #000;
     width: 100%;
 }
-
-/* Mobile view */
-
-/* @media (max-width:480px) {
-    .main-container{
-        height: 100vh;
-    }
-
-    .topBar{
-        display: grid;
-    }
-
-    nav, header{
-        width: 100%;
-    }
-
-    article{
-        display: grid;
-    }
-
-  
-
-    .leftContainer{
-        width: 100%;
-        order: -2;
-    }
-
-    .rightContainer{
-        width: 100%;
-    }
-
-    .whiteContainer{
-        display: none;
-    }
-
-    .flexRightContainer{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .imgContainer, .extraContainer{
-        width: 200%;
-        height: 200%;
-        
-    }
-    footer{
-        order: -2;
-    }
-} */
 
 /* Tablet view responsiveness */
  @media (max-width: 768px) {
@@ -216,3 +166,65 @@ footer{
 
 
 }  
+
+
+
+/* Mobile view */
+
+ @media (max-width:480px) {
+    .main-container{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .topBar{
+        display: grid;
+    }
+
+    .topBar nav{
+        display: block;
+        width: 100%;
+    }
+
+    section{
+        height: 15vh;
+        line-height: 15vh;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: 1fr;
+    }
+
+    .bar{
+        display: flex;
+        flex-direction: column;
+    }
+
+     article nav{
+        display: none;
+    }
+
+    .flexRightContainer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imgContainer{
+        width: 100%;
+        height: 12vh;
+    }
+
+    .extraContainer{
+        height: 12vh;
+    }
+
+    footer{
+        height: 12vh;
+    }
+
+    .leftContainer{
+        height: 15vh;
+    }
+} 
