@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerWrapper{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    border: 10px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    margin: 10px auto;
+}
+
+section{
+    max-inline-size: 340px;
+    block-size:200px;
+}
+
+
+/* Styling the first box */
+
+.firstBox{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 1fr 1fr;
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.firstBox div:first-child{
+    background: #FD6057;
+}
+
+.firstBox div:nth-child(2){
+    background: #FD815B;
+}
+
+.firstBox div:nth-child(3){
+    background: #FF9F62;
+}
+
+.firstBox div:nth-child(4){
+    background: #02A789;
+}
+
+.firstBox div:nth-child(5){
+    background: #1DC2A4;
+}
+
+.firstBox div:last-child{
+    background: #36DBBD;
+}
+
+
+/* Styling the second box */
+
+.secondBox{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 1fr 1fr;
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.secondBox div:first-child{
+    background: #FD6057;
+    grid-column: auto / span 2;
+}
+
+.secondBox div:nth-child(2){
+    background: #FF9F62;
+    grid-row: auto / span 2;
+}
+
+.secondBox div:nth-child(3){
+    background: #02A789;
+}
+
+.secondBox div:nth-child(4){
+    background: #1DC2A4;
+}
+
+
+/* Styling the third box */
+
+.thirdBox{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 1fr 80px 1fr;
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.thirdBox div:first-child{
+    background: #FF9F62;
+    grid-column: auto / span 3;
+}
+
+.thirdBox div:nth-child(2){
+    background: #02A789;
+}
+
+.thirdBox div:nth-child(3){
+    background: #FD6057;
+    grid-column: auto / span 2;
+}
+
+.thirdBox div:nth-child(4){
+    background: #1EC1A0;
+    grid-column: auto / span 3;
+}
+
+
+/* Styling the fourth box */
+
+.fourthBox{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 80px 1fr;
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.fourthBox div:first-child{
+    background: #FD815B;
+    grid-column: auto / span 2;
+ }
+
+ .fourthBox div:nth-child(2){
+    background: #FD6057;
+}
+
+.fourthBox div:nth-child(3){
+    background: #02A789;
+}
+
+.fourthBox div:nth-child(4){
+    background: #1DC2A4;
+    grid-column: auto / span 2;
+}
+
+.fourthBox div:last-child{
+    background: #FDA067;
+    grid-column: auto / span 3;
+}
+
+
+/* Styling the fifth container */
+
+.fifthBox{
+    display: grid;
+    grid-template-columns: repeat(6, 46px);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.fifthBox div:first-child{
+    background: #FD815B;
+}
+
+.fifthBox div:nth-child(2){
+    background: #1DC2A4;
+}
+
+.fifthBox div:nth-child(3){
+    background: #1DC2A4;
+}
+
+.fifthBox div:nth-child(4){
+    background: #FD6057;
+}
+
+.fifthBox div:nth-child(5){
+    background: #36DBBD;
+}
+
+.fifthBox div:nth-child(6){
+    background: #FD815B;
+}
+
+.fifthBox div:nth-child(7){
+    background: #FF9F62;
+}
+
+.fifthBox div:nth-child(8){
+    background: #02A789;
+}
+
+.fifthBox div:nth-child(9){
+    background: #FD815B;
+}
+
+.fifthBox div:nth-child(10){
+    background: #1DC2A4;
+}
+
+.fifthBox div:nth-child(11){
+    background: #FF9F62;
+}
+
+.fifthBox div:nth-child(12){
+    background: #FD6057;
+}
+
+.fifthBox div:nth-child(13){
+    background: #02A789;
+}
+
+.fifthBox div:nth-child(14){
+    background: #FD6057;
+}
+
+.fifthBox div:nth-child(15){
+    background: #36DBBD;
+}
+
+.fifthBox div:nth-child(16){
+    background: #FD815B;
+}
+
+.fifthBox div:nth-child(17){
+    background: #02A789;
+}
+
+.fifthBox div:nth-child(18){
+    background: #36DBBD;
+}
+
+
+/* Styling the 6th container */
+.sixthBox{
+    display: grid;
+    grid-template-columns: repeat(4, 73px);
+    grid-template-rows: repeat(6, 30px);
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.sixthBox div:first-child{
+    background: #FD6057;
+    grid-column: auto / span 2;
+}
+
+.sixthBox div:nth-child(2){
+    background: #02A789;
+}
+
+.sixthBox div:nth-child(3){
+    background: #FF9F62;
+}
+
+.sixthBox div:nth-child(4){
+    background: #FE8257;
+}
+
+.sixthBox div:nth-child(5){
+    background: #02A785;
+}
+
+.sixthBox div:nth-child(6){
+    background: #1AC4A0;
+}
+
+.sixthBox div:nth-child(7){
+    background: transparent;
+}
+
+.sixthBox div:nth-child(8){
+    background: #FF9F62;
+    grid-row: auto / span 2;
+    grid-column: auto / span 2;
+}
+
+.sixthBox div:nth-child(9){
+    background: #36DBBD;
+}
+
+.sixthBox div:nth-child(10){
+    background: #FD6057;
+}
+
+.sixthBox div:nth-child(11){
+    background: #02A789;
+}
+
+.sixthBox div:nth-child(12){
+    background: transparent;
+}
+
+.sixthBox div:nth-child(13){
+    background: #34DCBA;
+    grid-column: auto / span 3;
+}
+
+.sixthBox div:nth-child(14){
+    background: #FF9E61;
+}
+
+
+/* Styling the seventh box */
+
+.seventhBox{
+    display: grid;
+    grid-template-columns: repeat(4, 73px);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.seventhBox div:first-child{
+    background: #FF9F62;
+    grid-column: auto / span 2;
+ }
+
+ .seventhBox div:nth-child(2){
+    background: #36DBBD;
+    grid-column: auto / span 2;
+}
+
+.seventhBox div:nth-child(3){
+    background: #FD6057;
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+}
+
+.seventhBox div:nth-child(4){
+    background: #1DC2A4;
+    grid-column: auto / span 2;
+}
+
+.seventhBox div:nth-child(5){
+    background: #1DC2A4;
+}
+
+.seventhBox div:nth-child(6){
+    background: #FF9F62;
+}
+
+
+/* Styling the eight box */
+
+.eightBox{
+    display: grid;
+    grid-template-columns: repeat(5, 56.8px);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.eightBox div:first-child{
+    background: #FD6057;
+ }
+
+ .eightBox div:nth-child(2){
+    background: #FF9F62;
+}
+
+.eightBox div:nth-child(3){
+    background: #36DBBD;
+}
+
+.eightBox div:nth-child(4){
+    background: #1DC2A4;
+}
+
+.eightBox div:nth-child(5){
+    background: #02A789;
+}
+
+.eightBox div:nth-child(6){
+    background: #FF9F62;
+}
+
+.eightBox div:nth-child(7){
+    background: #FD6057;
+}
+
+.eightBox div:nth-child(8){
+    background: #FD815B;
+    grid-column: auto / span 3;
+}
+
+.eightBox div:nth-child(9){
+    background: #36DBBD;
+    grid-column: auto / span 5;
+}
+
+
+/* Styling the ninth box */
+
+.ninthBox{
+    display: grid;
+    grid-template-columns: repeat(4, 73px);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #2B3043;
+    width: fit-content;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.ninthBox div:first-child{
+    background: #FF9F62;
+    grid-column: auto / span 4;
+ }
+
+ .ninthBox div:nth-child(2){
+    background: #02A789;
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+}
+
+.ninthBox div:nth-child(3){
+    background: #36DBBD;
+    grid-column: auto / span 2;
+   
+}
+
+.ninthBox div:nth-child(4){
+    background: #FD6057;
+}
+
+.ninthBox div:nth-child(5){
+    background: #FF9F62;
+}
+
+
