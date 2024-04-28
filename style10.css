@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boxContainer{
+    margin: 70px 70px;
+    width: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns: 15% 25% 40% 15%;
+    grid-template-rows: 70px 70px 70px 70px;
+    gap: 2px;
+}
+
+.boxContainer div{
+    text-align: center;
+    line-height: 20px;
+}
+
+.box1{
+    background-color: #C9316A;
+}
+
+.box2{
+    grid-row: auto / span 2;
+    background: #CA319D;
+}
+
+.box3{
+  grid-row: auto / span 4;
+  background: #ED6F63;
+}
+
+.box4{
+    background: #EFC439;
+}
+
+.box5{
+    background: #558D46;
+}
+
+.box6{
+    background: #277E88;
+}
+
+.box7{
+    background: #799A29;
+}
+
+.box8{
+    background: #498756;
+}
+
+.box9{
+background: #2EC9C3;
+}
+
+.box10{
+background: #31C891;
+}
+
+.box11{
+    grid-column: auto / span 2;
+    background: #534078;
+}
+
+.box12{
+    background: #DD212F;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 40% 59%;
+    gap: 2PX;
+}
