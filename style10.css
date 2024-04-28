@@ -12,6 +12,8 @@
     grid-template-columns: 15% 25% 40% 15%;
     grid-template-rows: 70px 70px 70px 70px;
     gap: 2px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .boxContainer div{
@@ -31,6 +33,7 @@
 .box3{
   grid-row: auto / span 4;
   background: #ED6F63;
+  padding: 40%;
 }
 
 .box4{
