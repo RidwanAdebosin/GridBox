@@ -18,7 +18,6 @@
 
 .boxContainer div{
     text-align: center;
-    line-height: 20px;
 }
 
 .box1{
@@ -33,7 +32,6 @@
 .box3{
   grid-row: auto / span 4;
   background: #ED6F63;
-  padding: 40%;
 }
 
 .box4{
@@ -50,6 +48,12 @@
 
 .box7{
     background: #799A29;
+}
+
+.gridbox89{
+    display: grid;
+    grid-template-columns: 40% 59%;
+    gap: 2PX;
 }
 
 .box8{
@@ -73,8 +77,3 @@ background: #31C891;
     background: #DD212F;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: 40% 59%;
-    gap: 2PX;
-}
