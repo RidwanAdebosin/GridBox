@@ -12,7 +12,7 @@ body{
 .mainContainer{
     display: flex;
     gap: 1rem;
-    margin: 70px auto;
+    margin: 80px auto;
     width: 70%;
 }
 
