@@ -56,17 +56,23 @@ display: flex;
     border: none;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.cardContent{
-    position: relative;
+/* Styling the second container */
+
+.maleIcon img{
+   float: right;
+   padding: 10px;
+   font-weight: bold;
+   width: 20px;
 }
 
 .addButton{
-    position: fixed;
-    top: 330px;
-    right: 30px;
-
+    position: relative;
+    bottom: 20px;
+    left: 300px;
     font-weight: bold;
     border-radius: 50%;
     padding: 10px;
@@ -75,9 +81,9 @@ display: flex;
     width: 20px;
     height: 20px;
     text-align: center;
-
-    /* display: flex; */
+    cursor: pointer;
 }
+
 .cardContent{
     color: #585858;
     background: #FFFFFF;
@@ -88,19 +94,21 @@ display: flex;
     width: 100%;
     position: absolute;
     bottom: 0;
+    height: 50%;
 }
 
 .cardText{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    margin-block-end: 16px;
 }
 
-.userDetails2 h1{
+.contentCardInner h1{
     font-weight: bold;
     font-size: 26px;
-    margin-block-end: 10px;
+    margin-block-end: 15px;
+    color: #000;
 }
 
 .profession,.location{
@@ -108,12 +116,14 @@ display: flex;
     align-items: center;
     justify-content: center;
     gap: 2px;
+    cursor: pointer;
 }
 
 .userExtras{
     display: flex;
     gap: 5px;
     color: rgb(110, 107, 107);
+    margin-block-end: 18.5px;
 }
 
 .userExtras span{
@@ -132,7 +142,7 @@ footer{
 }
 
 footer div{
-    padding: 10px;
+    padding: 7px;
 }
 
 footer div:first-child{
