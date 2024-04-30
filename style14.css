@@ -9,25 +9,96 @@
 }
 
 .mainBackground{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: serif;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(120deg, #8EC2FE, #f32bfad8);
-    
+    display: flex;
+    gap: 5rem;
 }
 
 .contentCard{
-    width: 45%;
-    height: 70%;
-    padding: 20px;
+    width: 350px;
+    height: 70vh;
     border-radius: 10px;
     background: url(./images//Background.png),linear-gradient(120deg, #848F9F,#7E8A9A,#70798A, #090A10);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 250%;
-    mix-blend-mode: normal;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -730%;
 }
+
+.userDetails{
+    display: flex;
+ flex-direction: column;
+ align-items: end;
+ gap: 20rem;
+}
+
+.header{
+    color: antiquewhite;
+    padding-top: 30px;
+    margin-inline-end: 0.5rem;
+}
+
+.header h1{
+    font-size: 1.3rem;
+}
+
+.btn{
+    padding: 7px;
+    margin-inline-end: 0.5rem;
+    border-radius: 20px;
+    background: yellow;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.userDetails2{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 20rem;
+ text-align: center;
+}
+
+.userDetails2 h1{
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.profession,.location{
+    display: flex;
+    gap: 4px;
+}
+
+.userExtras{
+    display: flex;
+    margin-block-end: 5rem;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border: 3px solid black; */
+    width: 100%;
+}
+
+footer div:first-child{
+    border-right: 2px solid black;
+}
+
+footer div:nth-child(2){
+    border-right: 2px solid black;
+}
+
+.footerLine{
+    border: 1px solid black;
+    width: 100%;
+}
+
+
