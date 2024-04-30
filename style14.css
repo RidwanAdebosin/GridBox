@@ -15,18 +15,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(120deg, #8FC1FE,#A7A6F4, #BA97F3);
+    background: linear-gradient(120deg, #8EC2FE, #f32bfad8);
     
 }
 
 .contentCard{
     width: 45%;
     height: 70%;
-    /* background-color: white; */
     padding: 20px;
     border-radius: 10px;
-    /* background: url(./images//UserImage.jpg),linear-gradient(120deg, rgba(124, 133, 150, 0.7), rgba(6, 9, 14, 0.7));  */
-    background: url(./images//UserImage.jpg),linear-gradient(120deg, #7C8596,#06090E),url(./images/UserImage.jpg);
+    background: url(./images//Background.png),linear-gradient(120deg, #848F9F,#7E8A9A,#70798A, #090A10);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 250%;
+    mix-blend-mode: normal;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
