@@ -51,12 +51,29 @@ let validUsername = "Ridwan";
 
 const loginUser = (username, password) => {
     if(username === validUsername && password === validPassword){
-        console.log("Welcome on board");
+        console.log(`Welcome on board ${username}`);
     } else {
         console.log("Invalid username or password");
     }
 }
 
 loginUser("Ridwan", "Adebosin");
+
+let word = "lawal";
+
+const isItPalindrome = (direction) => {
+    let left = 0;
+    let right = direction.length-1;
+    while(left < right){
+        if(word[left] !== word[right]){
+            return false
+        } left++;
+        right--;
+        
+    }
+    return true
+    }
+
+console.log(isItPalindrome())
 
 
