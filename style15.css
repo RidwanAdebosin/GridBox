@@ -37,6 +37,10 @@ body{
     transform: rotate(1080deg);
 }
 
+.userDetails h4::first-letter{
+    color: red;
+}
+
 .navBar{
     display: flex;
     align-items: center;
@@ -80,17 +84,11 @@ body{
 .rightContent{
     width: 400px;
     height: 100vh;
-    /* background: url(./images//ProfilePicture-removebg-preview.png); */
-    /* background-size: cover; */
-    /* border: none; */
-    /* object-fit: fill; */
 }
 
 .adminImage img{
     width: 100%;
-    /* height: 10%; */
     object-fit: fill;
-    /* gap: 2px; */
 }
 
 .mainContent{
@@ -103,6 +101,7 @@ body{
     display: grid;
     gap: 15px;
     max-width: 50%;
+    margin-block-start: -10rem;
 }
 
 .leftContent p:first-child{
@@ -113,6 +112,58 @@ body{
     color: red;
 }
 
+.leftContent p{
+    text-wrap: balance;
+}
+
 .leftContent h1{
-    font-size: 30px;
+    max-width: 500px;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+@keyframes auto-scroll {
+    0% {
+        transform: translateY(0);
+    }
+    5% {
+        transform: translateY(0);  
+    }
+    10% {
+        transform: translateY(-1em);
+    }
+    30% {
+        transform: translateY(-1em);
+    }
+    35% {
+        transform: translateY(-2em);
+    }
+    55% {
+        transform: translateY(-2em);
+    }
+    60% {
+        transform: translateY(-3em);
+    }
+    80% {
+        transform: translateY(-3em);
+    }
+    85% {
+        transform: translateY(-4em);
+    }
+    100% {
+        transform: translateY(-4em);
+    }
+}
+
+.tracks{
+    /* position: relative; */
+    z-index: -1;
+    height: 1em;
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.tracks span{
+  animation: auto-scroll 15s infinite;
 }
