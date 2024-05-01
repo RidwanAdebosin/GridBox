@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mainContainer{
+    height: max-content;
+    background-color: #212429;
+    padding: 20px 40px 0px;
+    color: white;
+}
+
+.imgContainer{
+    width: 45px;
+    height: 45px;
+    background: url(./images/profileDp.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 3s ease-in-out;
+    outline: 1px solid white;
+    outline-offset: 2px;
+}
+
+.imgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+.imgContainer:hover{
+    transform: rotate(1080deg);
+}
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 5rem;
+}
+
+.leftNav{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.rightNav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rightNav a{
+    transition: all 3s ease-in;
+}
+
+.rightNav a:hover{
+    transform: scale(1);
+   font-weight: 600;
+}
+
+.rightNav a:last-child{
+    color: red;
+    padding: 20px;
+    background: #25242A;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    font-weight: bold;
+}
+
+.rightContent{
+    width: 400px;
+    height: 100vh;
+    /* background: url(./images//ProfilePicture-removebg-preview.png); */
+    /* background-size: cover; */
+    /* border: none; */
+    /* object-fit: fill; */
+}
+
+.adminImage img{
+    width: 100%;
+    /* height: 10%; */
+    object-fit: fill;
+    /* gap: 2px; */
+}
+
+.mainContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftContent{
+    display: grid;
+    gap: 15px;
+    max-width: 50%;
+}
+
+.leftContent p:first-child{
+    font-size: 14px;
+}
+
+.leftContent span{
+    color: red;
+}
+
+.leftContent h1{
+    font-size: 30px;
+}
