@@ -26,6 +26,11 @@ body{
     outline-offset: 2px;
 }
 
+.userDetails h4::first-letter{
+    color: red;
+}
+
+
 .imgContainer img{
     width: 100%;
     height: 100%;
@@ -37,9 +42,6 @@ body{
     transform: rotate(1080deg);
 }
 
-.userDetails h4::first-letter{
-    color: red;
-}
 
 .navBar{
     display: flex;
