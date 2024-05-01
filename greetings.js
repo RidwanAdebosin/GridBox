@@ -46,19 +46,17 @@ const multiplesOfNum = function(num) {
 multiplesOfNum(9);
 
 
+let validPassword = "Adebosin";
+let validUsername = "Ridwan";
 
-// const multiplesOfNum = function(num) {
-//     let multiple;
-//     let result;
-//     // Initialization, condition, and decrement
-//     for(let i = 20; i > 0; i--) {
-//         multiple = num * i;
-        
-//         // Check if the current multiple is even or odd
-//         result = multiple % 2 === 0 ? "even" : "odd";
+const loginUser = (username, password) => {
+    if(username === validUsername && password === validPassword){
+        console.log("Welcome on board");
+    } else {
+        console.log("Invalid username or password");
+    }
+}
 
-//         console.log(`These are 20 multiples of ${num} >>> ${multiple} and it is ${result}.`);
-//     }
-// };
+loginUser("Ridwan", "Adebosin");
 
-// multiplesOfNum(5);
+
