@@ -59,7 +59,7 @@ const loginUser = (username, password) => {
 
 loginUser("Ridwan", "Adebosin");
 
-let word = "lawal";
+let word = "rotator";
 
 const isItPalindrome = (direction) => {
     let left = 0;
@@ -69,11 +69,35 @@ const isItPalindrome = (direction) => {
             return false
         } left++;
         right--;
-        
     }
     return true
     }
 
-console.log(isItPalindrome())
+console.log(isItPalindrome(word));
+
+// Use the Nonmutative JavaScript array methods with 3 examples each.
+
+
+
+// Array.map() creates a new array by applying a function to each element in the original array
+let students = [
+    {firstName : "Ridwan", lastName: "Adebosin", age: 21},
+    {firstName : "Tyson", lastName: "Furry", age: 19}
+    {firstName : "Johnny", lastName: "Bravo", age: 9},
+]
+
+//applying the map method to add both firstName and lastName together
+let studentFullNameWithAge = students.map((student) => `${student.firstName} ${student.lastName} ${student.age}`);
+console.log(studentFullNameWithAge);
+
+
+// Array.filter() creates a new array with elements that pass a given condition
+let studentsAboveAge18 = students.filter((student) => student.age >= 18)
+console.log("The following students are above the age of 18:", studentsAboveAge18)
+
+// Array.slice() extracts a section of the array and returns a new array
+let studentBelowAge18 = students.slice(0, 1);
+console.log(studentBelowAge18);
+
 
 
