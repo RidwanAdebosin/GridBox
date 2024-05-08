@@ -116,24 +116,36 @@ let stateWithGrades = grades.concat(states);
 let gradesToString = grades.toString();
 // console.log(gradesToString);
 
-
 // Question 1:
 // Write a function that given two arrays, returns a new array containing elements that are present in both arrays.
-let array1 = [1, 2, 3, 4, 5,]
-let array2 = [2, 5, 7, 8, 11, 0]
-let newArray= [];
 
-function commmonNumbers(array1, array2){
-  commmonNumbers = array1.filter(element => array2.includes(element))
-  newArray.push(commmonNumbers)
+function commmonNumbers(array1, array2) {
+  let commmonNumbers = array1.filter((element) => array2.includes(element));
+  return commmonNumbers;
 }
-console.log([1,2,3,4,5])
+
+const commonElements = commmonNumbers([1, 2, 3, 4, 5, 0], [2, 5, 7, 8, 11, 0])
+console.log(commonElements);
 
 // Question 2:
-// Write a function that given an array of strings, return a new array with only the strings that have a length greater than 5.
+// Write a function that given an array of strings, return a new array with only 
+// the strings that have a length greater than 5.
+
+const stringsGreaterThanFive = (arrayElements) => {
+  let stringsGreaterThanFive = arrayElements.filter((element) => element.length > 5);
+  return stringsGreaterThanFive;
+}
+
+const arrayOfStringsGreaterThanFive = stringsGreaterThanFive(["Ridwan", "Chuks", "Adewale", "Tony"]);
+console.log(arrayOfStringsGreaterThanFive)
 
 // Question 3:
 // Write a function that uses the reduce() method to calculate the sum of an array of numbers.
+const sumOfNumbers = (arrayOfNumbers) => {
+  let sumOfNumbers = arrayOfNumbers.reduce((acc, currValue) => acc + currValue, 0 );
+  return sumOfNumbers;
+}
+console.log(sumOfNumbers[2, 3, 5, 7, 10])
 
 // Question 4:
 // Use the find() method to find the first object in an array that meets a certain condition.
