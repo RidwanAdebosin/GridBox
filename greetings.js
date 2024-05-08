@@ -108,10 +108,53 @@ const grades = [1, 2, 3, 4, 5];
 const states = ["Lagos", "Delta", "Rivers", "Edo"];
 
 let gradesWithLetter = grades.map((grade) => grade + "A");
-console.log(gradesWithLetter);
+// console.log(gradesWithLetter);
 
 let stateWithGrades = grades.concat(states);
-console.log(stateWithGrades);
+// console.log(stateWithGrades);
 
 let gradesToString = grades.toString();
-console.log(gradesToString);
+// console.log(gradesToString);
+
+
+// Question 1:
+// Write a function that given two arrays, returns a new array containing elements that are present in both arrays.
+let array1 = [1, 2, 3, 4, 5,]
+let array2 = [2, 5, 7, 8, 11, 0]
+let newArray= [];
+
+function commmonNumbers(array1, array2){
+  commmonNumbers = array1.filter(element => array2.includes(element))
+  newArray.push(commmonNumbers)
+}
+console.log([1,2,3,4,5])
+
+// Question 2:
+// Write a function that given an array of strings, return a new array with only the strings that have a length greater than 5.
+
+// Question 3:
+// Write a function that uses the reduce() method to calculate the sum of an array of numbers.
+
+// Question 4:
+// Use the find() method to find the first object in an array that meets a certain condition.
+
+// Question 5:
+// Write a function that uses the some() method to check if at least one element in an array meets a certain condition.
+
+// Question 6:
+// Use the every() method to check if all elements in an array meet a certain condition.
+
+// Question 7:
+// Write a function that when given an array of strings, returns a new array with only the strings that start with a vowel.
+
+// Question 8:
+// Write a function that when given an array of numbers, returns a new array with the elements sorted in descending order.
+
+// Question 9:
+// Write a function that uses the takes to arrays as input and returns the combination of the two arrays.
+
+// Question 10:
+// Write a function that given an array of strings and a string containing one letter e.g 'a', returns a new array with only the strings that contain the letter 'a'.
+
+// Question 11:
+// Write a function that takes an array of strings and returns the shortest word.
