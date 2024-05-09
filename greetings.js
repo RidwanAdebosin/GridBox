@@ -119,39 +119,53 @@ let gradesToString = grades.toString();
 // Question 1:
 // Write a function that given two arrays, returns a new array containing elements that are present in both arrays.
 
-function commmonNumbers(array1, array2) {
+function getCommmonNumbers(array1, array2) {
   let commmonNumbers = array1.filter((element) => array2.includes(element));
   return commmonNumbers;
 }
-
-const commonElements = commmonNumbers([1, 2, 3, 4, 5, 0], [2, 5, 7, 8, 11, 0])
-console.log(commonElements);
+console.log(getCommmonNumbers([1, 2, 3, 4, 5, 0], [2, 5, 7, 8, 11, 0]));
 
 // Question 2:
-// Write a function that given an array of strings, return a new array with only 
+// Write a function that given an array of strings, return a new array with only
 // the strings that have a length greater than 5.
 
-const stringsGreaterThanFive = (arrayElements) => {
-  let stringsGreaterThanFive = arrayElements.filter((element) => element.length > 5);
+const getStringsGreaterThanFive = (arrayElements) => {
+  let stringsGreaterThanFive = arrayElements.filter(
+    (element) => element.length > 5
+  );
   return stringsGreaterThanFive;
-}
-
-const arrayOfStringsGreaterThanFive = stringsGreaterThanFive(["Ridwan", "Chuks", "Adewale", "Tony"]);
-console.log(arrayOfStringsGreaterThanFive)
+};
+console.log(getStringsGreaterThanFive(["Ridwan", "Chuks", "Adewale", "Tony"]));
 
 // Question 3:
 // Write a function that uses the reduce() method to calculate the sum of an array of numbers.
-const sumOfNumbers = (arrayOfNumbers) => {
-  let sumOfNumbers = arrayOfNumbers.reduce((acc, currValue) => acc + currValue, 0 );
+const getSumOfNumbers = (arrayOfNumbers) => {
+  let sumOfNumbers = arrayOfNumbers.reduce(
+    (acc, currValue) => acc + currValue,
+    0
+  );
   return sumOfNumbers;
-}
-console.log(sumOfNumbers[2, 3, 5, 7, 10])
+};
+console.log(getSumOfNumbers([2, 3, 5, 7, 10]));
 
 // Question 4:
 // Use the find() method to find the first object in an array that meets a certain condition.
+const users = [
+  { firstName: "Ridwan", lastName: "Adebosin", age: 21 },
+  { firstName: "Tyson", lastName: "Furry", age: 19 },
+  { firstName: "Johnny", lastName: "Bravo", age: 9 },
+];
+
+let findUser = users.find((users) => users.age > 20);
+console.log(findUser);
 
 // Question 5:
 // Write a function that uses the some() method to check if at least one element in an array meets a certain condition.
+const getElement = (array) => {
+ let elementMeetCriteria = array.some((element) => typeof element === "number")
+ return elementMeetCriteria;
+}
+console.log(getElement(["boy", 1234, null, "Curve"]))
 
 // Question 6:
 // Use the every() method to check if all elements in an array meet a certain condition.
