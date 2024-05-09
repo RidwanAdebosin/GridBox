@@ -123,6 +123,7 @@ function getCommmonNumbers(array1, array2) {
   let commmonNumbers = array1.filter((element) => array2.includes(element));
   return commmonNumbers;
 }
+
 console.log(getCommmonNumbers([1, 2, 3, 4, 5, 0], [2, 5, 7, 8, 11, 0]));
 
 // Question 2:
@@ -135,6 +136,7 @@ const getStringsGreaterThanFive = (arrayElements) => {
   );
   return stringsGreaterThanFive;
 };
+
 console.log(getStringsGreaterThanFive(["Ridwan", "Chuks", "Adewale", "Tony"]));
 
 // Question 3:
@@ -146,6 +148,7 @@ const getSumOfNumbers = (arrayOfNumbers) => {
   );
   return sumOfNumbers;
 };
+
 console.log(getSumOfNumbers([2, 3, 5, 7, 10]));
 
 // Question 4:
@@ -162,25 +165,65 @@ console.log(findUser);
 // Question 5:
 // Write a function that uses the some() method to check if at least one element in an array meets a certain condition.
 const getElement = (array) => {
- let elementMeetCriteria = array.some((element) => typeof element === "number")
+ const elementMeetCriteria = array.some((element) => typeof element === "number");
  return elementMeetCriteria;
-}
+};
+
 console.log(getElement(["boy", 1234, null, "Curve"]))
 
 // Question 6:
 // Use the every() method to check if all elements in an array meet a certain condition.
+const meetAllCriteria = (arrayOfElements) => {
+  let elementMeetCriteria = arrayOfElements.every((element) => element.charAt(0) === element.toUpperCase().charAt(0));
+  return elementMeetCriteria;
+}
+
+console.log(meetAllCriteria(["Jelly", "Fish", "Lagos"]));
+
 
 // Question 7:
 // Write a function that when given an array of strings, returns a new array with only the strings that start with a vowel.
+const elementStartsWithVowel = (arrayOfElements) => {
+  let vowels = ["A", "E", "I", "O", "U"];
+  let elementMeetCriteria = arrayOfElements.filter((element) => vowels.includes(element.charAt(0).toUpperCase()));
+  return elementMeetCriteria;
+};
+
+console.log(elementStartsWithVowel(["Lagos", "Edo", "Kano", "Anambra", "Ekiti", "Ogun", "Zamfara"]));
+
 
 // Question 8:
 // Write a function that when given an array of numbers, returns a new array with the elements sorted in descending order.
+const sortInDescendingOrder = (arrayOfNumbers) => {
+let sortNumbers = arrayOfNumbers.sort((a , b) => b - a);
+return sortNumbers;
+};
 
-// Question 9:
-// Write a function that uses the takes to arrays as input and returns the combination of the two arrays.
+console.log(sortInDescendingOrder([5, 7,-3, 9, 1, 0, 3,-1]));
+
+// Question 9
+// Write a function that takes two arrays as input and returns the combination of the two arrays.
+const concatArrays = (array1, array2) => {
+  let addedArrays = array1.concat(array2);
+  return addedArrays;
+};
+
+console.log(concatArrays([1, 2, 3], [4, 5, 6]));
 
 // Question 10:
 // Write a function that given an array of strings and a string containing one letter e.g 'a', returns a new array with only the strings that contain the letter 'a'.
+const getArrayWithLetterO = (arrayOfElements) => {
+  let searchLetterO = arrayOfElements.filter((element) => element.includes("o"));
+  return searchLetterO;
+};
+
+console.log(getArrayWithLetterO(["Borno", "Lagos", "Kogi", "Abia", "Bauchi"]))
 
 // Question 11:
 // Write a function that takes an array of strings and returns the shortest word.
+const getShortestWord = (arrayOfElements) => {
+  let shortestWord = arrayOfElements.reduce((a, b) => a.length < b.length ? a : b)
+  return shortestWord;
+}
+
+console.log(getShortestWord(["Borno", "Lagos", "Kogi", "Abia", "Bauchi", "Edo"]))
