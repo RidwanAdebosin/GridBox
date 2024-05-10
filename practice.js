@@ -108,41 +108,105 @@ const getShortestWord = (arrayOfElements) => {
 
  
 
- const db = [
-    { name: "Cristiano", password: "Ronaldo", role: "admin" },
-    { name: "Lionel", password: "Messi", role: "student" },
-    { name: "Kylian", password: "Mbbape", role: "student" },
-];
+//  const db = [
+//     { name: "Cristiano", password: "Ronaldo", role: "admin" },
+//     { name: "Lionel", password: "Messi", role: "student" },
+//     { name: "Kylian", password: "Mbbape", role: "student" },
+// ];
 
-function updatedUser(username, password, nameOfUpdateTarget, property, updatedValue) {
-    // Check if the username and password match
-    const user = db.find(user => user.name === username && user.password === password);
-    if (user) {
-        console.log("Logged in successfully");
-    } else {
-        console.log("Invalid username or password.");
-    }
+// function updatedUser(username, password, nameOfUpdateTarget, property, updatedValue) {
+//     // Check if the username and password match
+//     const user = db.find(user => user.name === username && user.password === password);
+//     if (user) {
+//         console.log("Logged in successfully");
+//     } else {
+//         console.log("Invalid username or password.");
+//     }
     
    
-    if (user?.role === "admin") {
-        // Admin can perform specic actions
-        console.log("Admin privileges granted.");
+//     if (user?.role === "admin") {
+//         // Admin can perform specic actions
+//         console.log("Admin privileges granted.");
 
-        // Additional logic for updating user information
-        let userToUpdate = db.find(user => user.name === nameOfUpdateTarget);
+//         // Additional logic for updating user information
+//         let userToUpdate = db.find(user => user.name === nameOfUpdateTarget);
 
-        if (userToUpdate) {
-            userToUpdate.password = updatedValue;
-            // return console.log("Use updated:", userToUpdate)
-            return ("User updated:", userToUpdate = updatedValue);
+//         if (userToUpdate) {
+//             userToUpdate.password = updatedValue;
+//             // return console.log("Use updated:", userToUpdate)
+//             return ("User updated:", userToUpdate = updatedValue);
+//         } else {
+//             console.log("User not found for update.");
+//         }
+//     } else {
+//         console.log("You do not have permission to perform this action.");
+//     }
+//     return updatedUser;
+//     }
+
+//     updatedUser("Cristiano", "Ronaldo", "Cristiano", "password", "Goat");
+//     console.log(db[0])
+
+
+// Initial database containing user information
+let db = [
+    {name: "Ik", password: "Ik123", role: "admin"},
+    {name: "Uche", password: "Uche123", role: "admin"},
+    {name: "Paul", password: "Paul123", role: "admin"},
+    {name: "John", password: "John123", role: "student"},
+    {name: "Godwin", password: "Godwin123", role: "student"},
+    {name: "Amaka", password: "Amaka123", role: "student"},
+];
+
+// Function to update user's property in the database
+const updateUser = (userName, password, user, prop, value) => {
+    // Using findIndex to check through the objects in the array if the name value matches the logged-in username and password
+    //finding if the user exist
+    if(db.findIndex((e) => e.name === userName) !== -1 && db.findIndex((e) => e.password === password) !== -1){
+        // Let's find the index of the user with matching username and password then assign the index to it
+        let indexName = db.findIndex((e) => e.name === userName);
+        let indexPassword = db.findIndex((e) => e.password === password);
+        //
+        // firstly, let's check if the userName and Password mathes then check If the user has admin role, update the user's property
+        if (indexName === indexPassword) {
+            if (db[indexName].role === "admin"){
+                //only admin can have access to the arrown function
+                const update = () => {
+                    // Map through the database array to update the user's property
+                    const newDb = db.map((e) => {
+                        if (e.name === user) {
+                            e[prop] = value;
+                            return e;
+                        } else {
+                            return e;
+                        }
+                    });
+                    // Update the database with the new data
+                    db = newDb;
+                };
+                update();
+            } else {
+                // If user does not have admin role, display message indicating lack of authorization
+                console.log("Not Authorized for this operation");
+            }
         } else {
-            console.log("User not found for update.");
-        }
+            // If username does not match password, display this error message
+            console.log("UserName does not match password");
+        } 
     } else {
-        console.log("You do not have permission to perform this action.");
+        // If the provided log-in credentials are incorrect, display this error message
+        console.log("Wrong Credentials! Try Again");
     }
-    return updatedUser;
-    }
+};
 
-    updatedUser("Cristiano", "Ronaldo", "Cristiano", "password", "Goat");
-    console.log(db[0])
+// Display the initial user information before the admin updated it
+console.log(db[4]);
+
+// Update a user's role from student to admin
+updateUser("Ik", "Ik123", "Godwin", "role", "admin");
+
+// Display the updated database after it hasb been updated by the admin
+console.log(db[4]);
+
+
+
