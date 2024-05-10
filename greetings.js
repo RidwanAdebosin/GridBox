@@ -116,6 +116,8 @@ let stateWithGrades = grades.concat(states);
 let gradesToString = grades.toString();
 // console.log(gradesToString);
 
+
+
 // Question 1:
 // Write a function that given two arrays, returns a new array containing elements that are present in both arrays.
 
@@ -125,6 +127,7 @@ function getCommmonNumbers(array1, array2) {
 }
 
 console.log(getCommmonNumbers([1, 2, 3, 4, 5, 0], [2, 5, 7, 8, 11, 0]));
+
 
 // Question 2:
 // Write a function that given an array of strings, return a new array with only
@@ -138,6 +141,7 @@ const getStringsGreaterThanFive = (arrayElements) => {
 };
 
 console.log(getStringsGreaterThanFive(["Ridwan", "Chuks", "Adewale", "Tony"]));
+
 
 // Question 3:
 // Write a function that uses the reduce() method to calculate the sum of an array of numbers.
@@ -161,6 +165,7 @@ const users = [
 
 let findUser = users.find((users) => users.age > 20);
 console.log(findUser);
+
 
 // Question 5:
 // Write a function that uses the some() method to check if at least one element in an array meets a certain condition.
@@ -211,7 +216,8 @@ const concatArrays = (array1, array2) => {
 console.log(concatArrays([1, 2, 3], [4, 5, 6]));
 
 // Question 10:
-// Write a function that given an array of strings and a string containing one letter e.g 'a', returns a new array with only the strings that contain the letter 'a'.
+// Write a function that given an array of strings and a string containing one letter 
+// e.g 'a', returns a new array with only the strings that contain the letter 'a'.
 const getArrayWithLetterO = (arrayOfElements) => {
   let searchLetterO = arrayOfElements.filter((element) => element.includes("o"));
   return searchLetterO;
@@ -227,3 +233,12 @@ const getShortestWord = (arrayOfElements) => {
 }
 
 console.log(getShortestWord(["Borno", "Lagos", "Kogi", "Abia", "Bauchi", "Edo"]))
+
+function findShortestWordAmongMixedElements(stringslast) {
+  const strings = stringslast;
+      stringslast.sort((a, b) => a.length - b.length);
+
+  return strings[0]; 
+}
+
+console.log(findShortestWordAmongMixedElements(["Lorem ipsum", "dolor sit", "amet consectetur"])) 
