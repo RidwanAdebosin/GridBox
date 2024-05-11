@@ -170,7 +170,7 @@ const updateUser = (userName, password, user, prop, value) => {
         // firstly, let's check if the userName and Password mathes then check If the user has admin role, update the user's property
         if (indexName === indexPassword) {
             if (db[indexName].role === "admin"){
-                //only admin can have access to the arrown function
+                //only admin can have access to the arrow function
                 const update = () => {
                     // Map through the database array to update the user's property
                     const newDb = db.map((e) => {
@@ -200,13 +200,38 @@ const updateUser = (userName, password, user, prop, value) => {
 };
 
 // Display the initial user information before the admin updated it
-console.log(db[4]);
+// console.log(db[4]);
 
 // Update a user's role from student to admin
-updateUser("Ik", "Ik123", "Godwin", "role", "admin");
+updateUser("Godwin", "Godwin123", "Ik", "role", "student");
 
-// Display the updated database after it hasb been updated by the admin
-console.log(db[4]);
+// Display the updated database after it has been updated by the admin
+// console.log(db[4]);
 
 
+// Assignment
+// 1. Write a function that takes an array of objects e.g [{name: "mike", age: 40},{ name: "gift", age: 32}]
+//  and returns the name of the person with the highest age.
+// let arrayOfObjects = [{name: "mike", age: 40},{ name: "gift", age: 32}]
 
+const personWithHighestAge = (arrayOfObjects) =>{
+    
+
+}
+console.log(personWithHighestAge([{name: "mike", age: 40},{ name: "gift", age: 32}]))
+
+// 2. Write a function that takes an array of objects e.g [ {name: "grace", tithe: 40000}, {name: "james", tithe: 32000}]
+//  and returns the total tithe.
+
+
+// 3. Write a function that takes an array of objects e.g [ {name: "dan", salary: 30000, bonus: 5000}, { name: "linda", salary: 36000, bonus: 8000}] 
+// and returns a new array with their names and their salary plus their bonus as newSalary.
+
+
+// 4. Write a login function that looks at an array of objects e.g [ {email: "dan@gmail.com", password: "dan223", name: "dan"}] 
+// and takes two parameters that represents email and password. Throw errow messages 
+// If user doesn't exist in db, email and password not correct, email not correct, and 
+// password not correct, and say "login successful with the person's name" if emaio and password match.
+
+
+// 5. write a function that takes an array of strings and returns the shortest word.
