@@ -215,14 +215,20 @@ updateUser("Godwin", "Godwin123", "Ik", "role", "student");
 // let arrayOfObjects = [{name: "mike", age: 40},{ name: "gift", age: 32}]
 
 const personWithHighestAge = (arrayOfObjects) =>{
-    
-
+    arrayOfObjects.sort((a, b) => b - a);
+        return (arrayOfObjects[0].name);
 }
-console.log(personWithHighestAge([{name: "mike", age: 40},{ name: "gift", age: 32}]))
+console.log(personWithHighestAge([{name: "mike", age: 40},{ name: "gift", age: 32}]));
 
 // 2. Write a function that takes an array of objects e.g [ {name: "grace", tithe: 40000}, {name: "james", tithe: 32000}]
 //  and returns the total tithe.
 
+const addTithes = (arrayOfObjects) =>  {
+ let totalTithesPaid = arrayOfObjects.filter((e) => e.tithe);
+    return totalTithesPaid;
+}
+
+console.log(addTithes([ {name: "grace", tithe: 40000}, {name: "james", tithe: 32000}]))
 
 // 3. Write a function that takes an array of objects e.g [ {name: "dan", salary: 30000, bonus: 5000}, { name: "linda", salary: 36000, bonus: 8000}] 
 // and returns a new array with their names and their salary plus their bonus as newSalary.
