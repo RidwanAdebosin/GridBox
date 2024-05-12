@@ -224,7 +224,7 @@ console.log(personWithHighestAge([{name: "mike", age: 40},{ name: "gift", age: 3
 //  and returns the total tithe.
 
 const addTithes = (arrayOfObjects) =>  {
- let totalTithesPaid = arrayOfObjects.filter((e) => e.tithe);
+ let totalTithesPaid = arrayOfObjects.reduce((prev, curr) => prev + curr.tithe, 0);
     return totalTithesPaid;
 }
 
@@ -232,6 +232,16 @@ console.log(addTithes([ {name: "grace", tithe: 40000}, {name: "james", tithe: 32
 
 // 3. Write a function that takes an array of objects e.g [ {name: "dan", salary: 30000, bonus: 5000}, { name: "linda", salary: 36000, bonus: 8000}] 
 // and returns a new array with their names and their salary plus their bonus as newSalary.
+const getNewSalary = (arrayOfObjects) => {
+    const newSalary =  arrayOfObjects.map((e) => {
+        
+
+    }
+    )
+    return newSalary;
+
+}
+console.log(getNewSalary([{name: "dan", salary: 30000, bonus: 5000}, { name: "linda", salary: 36000, bonus: 8000}]))
 
 
 // 4. Write a login function that looks at an array of objects e.g [ {email: "dan@gmail.com", password: "dan223", name: "dan"}] 
@@ -241,3 +251,8 @@ console.log(addTithes([ {name: "grace", tithe: 40000}, {name: "james", tithe: 32
 
 
 // 5. write a function that takes an array of strings and returns the shortest word.
+const getShortestWordFromTheArray= (arrayOfElements) => {
+    let shortestWord = arrayOfElements.reduce((a , b) => a.length < b.length ? a : b)
+    return shortestWord;
+}
+console.log(getShortestWordFromTheArray(["Benue", "Onitsha", "Kano", "Anambra"]))
