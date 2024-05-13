@@ -1,24 +1,34 @@
-let dataBase = [
-    {email:"nelsom@gmail.com", password:"nel223", name:"nelson"},
-    {email:"ibrahim@gmail.com", password:"ola223", name:"ibrahim"}
-]
+const database = [
+  { email: "dan@gmail.com", password: "dan223", name: "dan" },
+  { email: "oba@gmail.com", password: "oba223", name: "oba" },
+  { email: "ekun@gmail.com", password: "ekun223", name: "ekun" },
+  { email: "tiger@gmail.com", password: "tiger223", name: "tiger" },
+  { email: "lion@gmail.com", password: "lion223", name: "lion" },
+];
 
-const represent = (email, password) => {
-    // Getting the index of the login details
-    let userIndex = dataBase.findIndex((user) => user.email === email && user.password === password);
+const userAuthentication = (userEmail, userPassword) => {
+  // Find the user in the database
+  const userData = database.find(
+    (user) => user.email === userEmail && user.password === userPassword
+  );
 
-    // Check if user exists
-    if (userIndex !== -1) {
-        return "Login successful";
-    } else {
-        // Check if email exists
-        let emailIndex = dataBase.findIndex((user) => user.email === email);
-        if (emailIndex !== -1) {
-            return "Password is incorrect";
-        } else {
-            return "Email not found in the database";
-        }
-    }
-}
+  // Check if user exists
+  if (userData) {
+    console.log("You are welcome");
+  } else {
+    // If the provided log-in credentials are incorrect, display this error message
+    console.log("User not found or wrong credentials! Try Again");
+    return;
+  }
 
-console.log(represent("nelsom@gmail.com", "nel223"));
+  // Check if the email or password is incorrect
+  if (userData.email !== userEmail) {
+    console.log("Incorrect email. Please try again.");
+  }
+  if (userData.password !== userPassword) {
+    console.log("Incorrect password. Please try again.");
+  }
+  // return userAuthentication;
+};
+
+console.log(userAuthentication("dan@gmail.com", "ekun223"))

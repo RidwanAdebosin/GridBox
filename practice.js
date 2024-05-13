@@ -290,7 +290,42 @@ console.log(
 // If user doesn't exist in db, email and password not correct, email not correct, and
 // password not correct, and say "login successful with the person's name" if email and password match.
 
-
+let database = [
+    { email: "dan@gmail.com", password: "dan223", name: "dan" },
+    { email: "oba@gmail.com", password: "oba223", name: "oba" },
+    { email: "ekun@gmail.com", password: "ekun223", name: "ekun" },
+    { email: "tiger@gmail.com", password: "tiger223", name: "tiger" },
+    { email: "lion@gmail.com", password: "lion223", name: "lion" },
+  ];
+  
+  const userAuthentication = (userEmail, userPassword) => {
+    // Find the user in the database
+    const userData = database.find(
+      (user) => user.email === userEmail && user.password === userPassword
+    );
+  
+    // Check if user exists
+    if (userData) {
+      console.log("You are welcome");
+      
+      // Check if the email or password is incorrect
+      if (userData.email !== userEmail) {
+        throw new Error("Incorrect email. Please try again.");
+      } else if (userData.password !== userPassword) {
+        throw new Error("Incorrect password. Please try again.");
+      }
+    } else {
+      // If the provided log-in credentials are incorrect, display this error message
+      throw new Error("User not found. Wrong Credentials! Try Again");
+    }
+  };
+  
+  try {
+    userAuthentication("dan@gmail.com", "lion223"); // Incorrect password
+  } catch (error) {
+    console.error(error.message);
+  }
+  
 
 
 
