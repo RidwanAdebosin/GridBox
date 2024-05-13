@@ -17,7 +17,7 @@ const userAuthentication = (userEmail, userPassword) => {
     console.log("You are welcome");
   } else {
     // If the provided log-in credentials are incorrect, display this error message
-    console.log("User not found or wrong credentials! Try Again");
+    console.log("User not found!");
     return;
   }
 
@@ -28,7 +28,8 @@ const userAuthentication = (userEmail, userPassword) => {
   if (userData.password !== userPassword) {
     console.log("Incorrect password. Please try again.");
   }
-  // return userAuthentication;
 };
 
-console.log(userAuthentication("dan@gmail.com", "ekun223"))
+// userAuthentication("lion@gmail.com", "lion223"); // Should print "You are welcome"
+// console.log(userAuthentication("lion@gmail.com", "wrongpassword")); // Should print "Incorrect password. Please try again."
+console.log(userAuthentication("wrongemail@gmail.com", "lion223")); // Should print "Incorrect email. Please try again."

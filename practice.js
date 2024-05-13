@@ -299,31 +299,20 @@ let database = [
   ];
   
   const userAuthentication = (userEmail, userPassword) => {
-    // Find the user in the database
-    const userData = database.find(
-      (user) => user.email === userEmail && user.password === userPassword
-    );
-  
-    // Check if user exists
-    if (userData) {
-      console.log("You are welcome");
-      
-      // Check if the email or password is incorrect
-      if (userData.email !== userEmail) {
-        throw new Error("Incorrect email. Please try again.");
-      } else if (userData.password !== userPassword) {
-        throw new Error("Incorrect password. Please try again.");
+    const emailIndex = database.findIndex((e) => e.email === email);
+    const passwordIndex = database.findIndex((e) => e.password === password);
+
+    if((emailIndex !== -1) &&  (passwordIndex !== -1)) {
+      if (emailIndex === passwordIndex) {
+        console.log(`Welcome ${database[emailIndex].name}`)
+      } else {
+        console.log("Credentials don't match");
+      } else if ((emailIndex === -1)) {
+        console.log("Email incorrect")
+      } else {
+        console.log("password incorrect")
       }
-    } else {
-      // If the provided log-in credentials are incorrect, display this error message
-      throw new Error("User not found. Wrong Credentials! Try Again");
     }
-  };
-  
-  try {
-    userAuthentication("dan@gmail.com", "lion223"); // Incorrect password
-  } catch (error) {
-    console.error(error.message);
   }
   
 
