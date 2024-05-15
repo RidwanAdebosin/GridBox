@@ -291,38 +291,32 @@ console.log(
 // password not correct, and say "login successful with the person's name" if email and password match.
 
 let database = [
-    { email: "dan@gmail.com", password: "dan223", name: "dan" },
-    { email: "oba@gmail.com", password: "oba223", name: "oba" },
-    { email: "ekun@gmail.com", password: "ekun223", name: "ekun" },
-    { email: "tiger@gmail.com", password: "tiger223", name: "tiger" },
-    { email: "lion@gmail.com", password: "lion223", name: "lion" },
-  ];
-  
-  const userAuthentication = (userEmail, userPassword) => {
-    const emailIndex = database.findIndex((e) => e.email === userEmail);
-    const passwordIndex = database.findIndex((e) => e.password === userPassword);
+  { email: "dan@gmail.com", password: "dan223", name: "dan" },
+  { email: "oba@gmail.com", password: "oba223", name: "oba" },
+  { email: "ekun@gmail.com", password: "ekun223", name: "ekun" },
+  { email: "tiger@gmail.com", password: "tiger223", name: "tiger" },
+  { email: "lion@gmail.com", password: "lion223", name: "lion" },
+];
 
-    if((emailIndex !== -1) &&  (passwordIndex !== -1)) {
-      if (emailIndex === passwordIndex) {
-        console.log(`Welcome ${database[emailIndex].name}`)
-      } else {
-        console.log("Credentials don't match");
-      } 
+const userAuthentication = (userEmail, userPassword) => {
+  const emailIndex = database.findIndex((e) => e.email === userEmail);
+  const passwordIndex = database.findIndex((e) => e.password === userPassword);
+
+  if (emailIndex !== -1 && passwordIndex !== -1) {
+    if (emailIndex === passwordIndex) {
+      console.log(`Welcome ${database[emailIndex].name}`);
+    } else {
+      console.log("Credentials don't match");
     }
-      else {
-        if ((emailIndex === -1))
-      {
-        console.log("Email incorrect")
-      } else {
-        console.log("password incorrect")
-      }
+  } else {
+    if (emailIndex === -1) {
+      console.log("Email incorrect");
+    } else {
+      console.log("password incorrect");
     }
   }
-  userAuthentication("oba@gmail.com", "oba223")
-  
-
-
-
+};
+userAuthentication("oba@gmail.com", "oba223");
 
 // 5. write a function that takes an array of strings and returns the shortest word.
 const getShortestWordFromTheArray = (arrayOfElements) => {
@@ -335,14 +329,35 @@ console.log(
   getShortestWordFromTheArray(["Benue", "Onitsha", "Kano", "Anambra"])
 );
 
-
-// 1. Write a function that takes an array of objects representing students with their grades 
-// (e.g., {name: "Alice", grade: 85}) and returns 
+// 1. Write a function that takes an array of objects representing students with their grades
+// (e.g., {name: "Alice", grade: 85}) and returns
 // a new array with their names and whether they passed (grade >= 60).
+
+const passedExamination = (arrayOfStudents) => {
+  let studentThatPassed = arrayOfStudents.map((e) => {
+    if (e.grade >= 60) {
+      return `${e.name} passed the examination`;
+    } else {
+      return `${e.name} failed the examination`;
+    }
+  });
+  return studentThatPassed;
+};
+console.log(
+  passedExamination([
+    { name: "Alice", grade: 85 },
+    { name: "Bob", grade: 45 },
+    { name: "Charlie", grade: 75 },
+  ])
+);
+
+// 2. Create a function that receives an array of objects representing books 
+// (e.g., {title: "Harry Potter", pages: 400}) and returns
+//  a new array with titles and whether the book is considered long (pages > 300).
    
   
-   const students = [
-       { name: "Alice", grade: 85 },
-       { name: "Bob", grade: 45 },
-       { name: "Charlie", grade: 75 }
+   const books = [
+       { title: "Harry Potter", pages: 400 },
+       { title: "The Great Gatsby", pages: 250 },
+       { title: "Lord of the Rings", pages: 600 }
    ];
