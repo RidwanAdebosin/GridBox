@@ -299,21 +299,26 @@ let database = [
   ];
   
   const userAuthentication = (userEmail, userPassword) => {
-    const emailIndex = database.findIndex((e) => e.email === email);
-    const passwordIndex = database.findIndex((e) => e.password === password);
+    const emailIndex = database.findIndex((e) => e.email === userEmail);
+    const passwordIndex = database.findIndex((e) => e.password === userPassword);
 
     if((emailIndex !== -1) &&  (passwordIndex !== -1)) {
       if (emailIndex === passwordIndex) {
         console.log(`Welcome ${database[emailIndex].name}`)
       } else {
         console.log("Credentials don't match");
-      } else if ((emailIndex === -1)) {
+      } 
+    }
+      else {
+        if ((emailIndex === -1))
+      {
         console.log("Email incorrect")
       } else {
         console.log("password incorrect")
       }
     }
   }
+  userAuthentication("oba@gmail.com", "oba223")
   
 
 
