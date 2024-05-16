@@ -356,8 +356,51 @@ console.log(
 //  a new array with titles and whether the book is considered long (pages > 300).
    
   
-   const books = [
-       { title: "Harry Potter", pages: 400 },
-       { title: "The Great Gatsby", pages: 250 },
-       { title: "Lord of the Rings", pages: 600 }
+  //  const books = [
+  //      { title: "Harry Potter", pages: 400 },
+  //      { title: "The Great Gatsby", pages: 250 },
+  //      { title: "Lord of the Rings", pages: 600 }
+  //  ];
+
+   const noOfBookPages= (arrayOfBooks) => {
+     let mappedBooks = arrayOfBooks.map((e) => {
+      if (e.pages > 300) {
+        return (`${e.title} has a total number of ${e.pages} so its considered a long book`)
+      } else {
+        return (`${e.title} has a total number of ${e.pages} so its considered a small book`);
+      }
+     })
+     return mappedBooks;
+   };
+   console.log(noOfBookPages( [
+    { title: "Harry Potter", pages: 400 },
+    { title: "The Great Gatsby", pages: 250 },
+    { title: "Lord of the Rings", pages: 600 }
+]))
+
+
+// 3. Implement a function that takes an array of objects containing products 
+// and their prices (e.g., {name: "Laptop", price: 1000}) and returns a 
+// new array with the names of products and whether they are expensive (price > 500).
+   
+ 
+   const products = [
+       { name: "Laptop", price: 1000 },
+       { name: "Headphones", price: 80 },
+       { name: "Smartphone", price: 600 }
    ];
+
+   const productsPrice = (arrayOfProducts) => {
+    let productPrice = arrayOfProducts.map((e) => {
+      if(e.price > 500 ? `console.log${e.name} is an expensive producs that cost ${e.price} : null`);
+    }
+  )
+  return productPrice;
+
+   }
+
+   console.log(productsPrice([
+    { name: "Laptop", price: 1000 },
+    { name: "Headphones", price: 80 },
+    { name: "Smartphone", price: 600 }
+];))
