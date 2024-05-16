@@ -351,73 +351,120 @@ console.log(
   ])
 );
 
-// 2. Create a function that receives an array of objects representing books 
+// 2. Create a function that receives an array of objects representing books
 // (e.g., {title: "Harry Potter", pages: 400}) and returns
 //  a new array with titles and whether the book is considered long (pages > 300).
-   
-  
-  //  const books = [
-  //      { title: "Harry Potter", pages: 400 },
-  //      { title: "The Great Gatsby", pages: 250 },
-  //      { title: "Lord of the Rings", pages: 600 }
-  //  ];
 
-   const noOfBookPages= (arrayOfBooks) => {
-     let mappedBooks = arrayOfBooks.map((e) => {
-      if (e.pages > 300) {
-        return (`${e.title} has a total number of ${e.pages} so its considered a long book`)
-      } else {
-        return (`${e.title} has a total number of ${e.pages} so its considered a small book`);
-      }
-     })
-     return mappedBooks;
-   };
-   console.log(noOfBookPages( [
+//  const books = [
+//      { title: "Harry Potter", pages: 400 },
+//      { title: "The Great Gatsby", pages: 250 },
+//      { title: "Lord of the Rings", pages: 600 }
+//  ];
+
+const noOfBookPages = (arrayOfBooks) => {
+  let mappedBooks = arrayOfBooks.map((e) => {
+    if (e.pages > 300) {
+      return `${e.title} has a total number of ${e.pages} so its considered a long book`;
+    } else {
+      return `${e.title} has a total number of ${e.pages} so its considered a small book`;
+    }
+  });
+  return mappedBooks;
+};
+console.log(
+  noOfBookPages([
     { title: "Harry Potter", pages: 400 },
     { title: "The Great Gatsby", pages: 250 },
-    { title: "Lord of the Rings", pages: 600 }
-]))
+    { title: "Lord of the Rings", pages: 600 },
+  ])
+);
 
-
-// 3. Implement a function that takes an array of objects containing products 
-// and their prices (e.g., {name: "Laptop", price: 1000}) and returns a 
+// 3. Implement a function that takes an array of objects containing products
+// and their prices (e.g., {name: "Laptop", price: 1000}) and returns a
 // new array with the names of products and whether they are expensive (price > 500).
-   
- 
 
 const productsPrice = (arrayOfProducts) => {
-    let productPrice = arrayOfProducts.map((e) => {
-      if(e.price > 500){
-        return (`${e.name} is an expensive products that cost ${e.price} dollars`);
-      } else {
-        return (`${e.name} is not an expensive products because it cost just ${e.price} dollars`);
-      }
-    })
-      return productPrice;
-   };
-   console.log(productsPrice([
+  let productPrice = arrayOfProducts.map((e) => {
+    if (e.price > 500) {
+      return `${e.name} is an expensive products that cost ${e.price} dollars`;
+    } else {
+      return `${e.name} is not an expensive products because it cost just ${e.price} dollars`;
+    }
+  });
+  return productPrice;
+};
+console.log(
+  productsPrice([
     { name: "Laptop", price: 1000 },
     { name: "Headphones", price: 80 },
-    { name: "Smartphone", price: 600 }
-]))
+    { name: "Smartphone", price: 600 },
+  ])
+);
 
-
-// 4. Develop a function that accepts an array of objects representing employees and their years of service 
+// 4. Develop a function that accepts an array of objects representing employees and their years of service
 // (e.g., {name: "John", years: 5}) and returns a new array with names and whether they are eligible for a bonus (years >= 5).
-   
- 
-   const employeesData = (arrayOfObjects) => {
-      employeeEligibility = arrayOfObjects.map((e) => {
-        if (e.years >= 5) {
-          return (`${e.name} has spent ${e.years} in service so he is eligible to take the company bonus`)
-        } else {
-          return (`${e.name} has only spent ${e.years} in service so he is not eligible to take the company bonus`)
-        }
-      })
-      return employeeEligibility;
-   }
-   console.log(employeesData([
+
+const employeesData = (arrayOfObjects) => {
+  let employeeEligibility = arrayOfObjects.map((e) => {
+    if (e.years >= 5) {
+      return `${e.name} has spent ${e.years} in service so he is eligible to take the company bonus`;
+    } else {
+      return `${e.name} has only spent ${e.years} in service so he is not eligible to take the company bonus`;
+    }
+  });
+  return employeeEligibility;
+};
+console.log(
+  employeesData([
     { name: "John", years: 5 },
     { name: "Alice", years: 2 },
-    { name: "Bob", years: 7 }
-]))
+    { name: "Bob", years: 7 },
+  ])
+);
+
+// 5. Write a function that takes an array of objects representing cities and their populations
+// (e.g., {name: "New York", population: 8000000})
+// and returns a new array with city names and whether they are considered large cities (population > 1 million).
+
+const citiesCensus = (arrayOfObjects) => {
+  let population = arrayOfObjects.map((e) => {
+    if (e.population >= 1000000) {
+      return `${e.name} is a large city with the total population of ${e.population} people`;
+    } else {
+      return `${e.name} is not considered a large city because its population is ${e.population}  which is not up to 1000000`;
+    }
+  });
+  return population;
+};
+console.log(
+  citiesCensus([
+    { name: "New York", population: 8000000 },
+    { name: "Los Angeles", population: 4000000 },
+    { name: "Chicago", population: 2700000 },
+  ])
+);
+
+// 6. Create a function that receives an array of objects representing cars and their prices 
+// (e.g., {brand: "Toyota", price: 25000}) and returns a new array with the brands and whether they are affordable (price < 30000).
+   
+  
+   
+
+   const carsInGarage = (arrayOfObjects) => {
+    let carInGarage = arrayOfObjects.map((e) => {
+      if (e.price > 30000) {
+        return `${e.brand} is not affordable as the current market price is ${e.price} `;
+      } else {
+        return `${e.brand} is affordable as the current market price is ${e.price} which is a good rate`;
+      }
+    });
+    return carInGarage;
+  };
+  
+  console.log(
+    citiesCensus([
+      { brand: "Toyota", price: 25000 },
+      { brand: "BMW", price: 40000 },
+      { brand: "Honda", price: 20000 }
+    ])
+  );
