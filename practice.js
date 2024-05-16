@@ -384,23 +384,40 @@ console.log(
 // new array with the names of products and whether they are expensive (price > 500).
    
  
-   const products = [
-       { name: "Laptop", price: 1000 },
-       { name: "Headphones", price: 80 },
-       { name: "Smartphone", price: 600 }
-   ];
 
-   const productsPrice = (arrayOfProducts) => {
+const productsPrice = (arrayOfProducts) => {
     let productPrice = arrayOfProducts.map((e) => {
-      if(e.price > 500 ? `console.log${e.name} is an expensive producs that cost ${e.price} : null`);
-    }
-  )
-  return productPrice;
-
-   }
-
+      if(e.price > 500){
+        return (`${e.name} is an expensive products that cost ${e.price} dollars`);
+      } else {
+        return (`${e.name} is not an expensive products because it cost just ${e.price} dollars`);
+      }
+    })
+      return productPrice;
+   };
    console.log(productsPrice([
     { name: "Laptop", price: 1000 },
     { name: "Headphones", price: 80 },
     { name: "Smartphone", price: 600 }
-];))
+]))
+
+
+// 4. Develop a function that accepts an array of objects representing employees and their years of service 
+// (e.g., {name: "John", years: 5}) and returns a new array with names and whether they are eligible for a bonus (years >= 5).
+   
+ 
+   const employeesData = (arrayOfObjects) => {
+      employeeEligibility = arrayOfObjects.map((e) => {
+        if (e.years >= 5) {
+          return (`${e.name} has spent ${e.years} in service so he is eligible to take the company bonus`)
+        } else {
+          return (`${e.name} has only spent ${e.years} in service so he is not eligible to take the company bonus`)
+        }
+      })
+      return employeeEligibility;
+   }
+   console.log(employeesData([
+    { name: "John", years: 5 },
+    { name: "Alice", years: 2 },
+    { name: "Bob", years: 7 }
+]))
