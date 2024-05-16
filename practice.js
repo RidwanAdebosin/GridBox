@@ -355,12 +355,6 @@ console.log(
 // (e.g., {title: "Harry Potter", pages: 400}) and returns
 //  a new array with titles and whether the book is considered long (pages > 300).
 
-//  const books = [
-//      { title: "Harry Potter", pages: 400 },
-//      { title: "The Great Gatsby", pages: 250 },
-//      { title: "Lord of the Rings", pages: 600 }
-//  ];
-
 const noOfBookPages = (arrayOfBooks) => {
   let mappedBooks = arrayOfBooks.map((e) => {
     if (e.pages > 300) {
@@ -444,27 +438,147 @@ console.log(
   ])
 );
 
-// 6. Create a function that receives an array of objects representing cars and their prices 
+// 6. Create a function that receives an array of objects representing cars and their prices
 // (e.g., {brand: "Toyota", price: 25000}) and returns a new array with the brands and whether they are affordable (price < 30000).
-   
-  
-   
 
-   const carsInGarage = (arrayOfObjects) => {
-    let carInGarage = arrayOfObjects.map((e) => {
-      if (e.price > 30000) {
-        return `${e.brand} is not affordable as the current market price is ${e.price} `;
+const carsInGarage = (arrayOfObjects) => {
+  let carInGarage = arrayOfObjects.map((e) => {
+    if (e.price > 30000) {
+      return `${e.brand} is not affordable as the current market price is ${e.price} `;
+    } else {
+      return `${e.brand} is affordable as the current market price is ${e.price} which is a good rate`;
+    }
+  });
+  return carInGarage;
+};
+
+console.log(
+  carsInGarage([
+    { brand: "Toyota", price: 25000 },
+    { brand: "BMW", price: 40000 },
+    { brand: "Honda", price: 20000 },
+  ])
+);
+
+// 7. Develop a function that receives an array of strings and returns the word with the most vowels.
+
+const getWordsWithMostVowelWords = (arrayOfStrings) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let countVowels = (word) => {
+    return word.split("").filter((e) => vowels.includes(e)).length;
+  };
+
+  let sortedWords = arrayOfStrings.sort(
+    (a, b) => countVowels(b) - countVowels(a)
+  );
+  const wordsWithMaxVowels = countVowels(sortedWords[0]);
+  let wordsWithMostVowels = sortedWords.filter(
+    (word) => countVowels(word) === wordsWithMaxVowels
+  );
+
+  return wordsWithMostVowels;
+};
+
+console.log(
+  getWordsWithMostVowelWords(["cat", "dog", "bird", "elephant", "fish"])
+);
+
+// 8. Create a function that accepts an array of strings and returns the word with the fewest vowels.
+
+const vowels = ["a", "e", "i", "o", "u"];
+const getWordsWithMinVowels = (arrayOfStrings) => {
+  let countVowels = (word) => {
+    return word
+      .split("")
+      .filter((element) => vowels.includes(element.toLowerCase())).length;
+  };
+  let sortedWords = arrayOfStrings.sort(
+    (a, b) => countVowels(a) - countVowels(b)
+  );
+  const minVowels = countVowels(sortedWords[0]);
+  let wordsWithLeastVowels = sortedWords.filter(
+    (word) => countVowels(word) === minVowels
+  );
+  return wordsWithLeastVowels;
+};
+
+console.log(getWordsWithMinVowels(["car", "bike", "train", "plane", "boat"]));
+
+// 9. Implement a function that takes an array of strings and returns the word with the most consonants.
+const maxConsonantWords = (arrayOfStrings) => {
+  let countConsonants = (word) => {
+    return word
+      .split("")
+      .filter((element) => !vowels.includes(element.toLowerCase())).length;
+  };
+  let sortedWords = arrayOfStrings.sort(
+    (a, b) => countConsonants(b) - countConsonants(a)
+  );
+  const maxConsonants = countConsonants(sortedWords[0]);
+  let wordsWithMaxConsonants = sortedWords.filter(
+    (word) => countConsonants(word) === maxConsonants
+  );
+  return wordsWithMaxConsonants;
+};
+console.log(
+  maxConsonantWords(["house", "apartment", "cabin", "mansion", "shack"])
+);
+
+// 10. Write a function that takes an array of strings and returns the word with the fewest consonants.
+const leastConsonantWords = (arrayOfStrings) => {
+  let countConsonants = (word) => {
+    return word
+      .split("")
+      .filter((element) => !vowels.includes(element.toLowerCase())).length;
+  };
+  let sortedWords = arrayOfStrings.sort(
+    (a, b) => countConsonants(a) - countConsonants(b)
+  );
+  const minConsonants = countConsonants(sortedWords[0]);
+  let wordsWithMinConsonants = sortedWords.filter(
+    (word) => countConsonants(word) === minConsonants
+  );
+  return wordsWithMinConsonants;
+};
+console.log(
+  leastConsonantWords(["sun", "moon", "stars", "planet", "kea", "galaxy"])
+);
+
+// 11. Implement a function that takes an array of strings and returns the word with the most repeated letters.
+
+const getRepeatedLetters = (arrayOfStrings) => {
+  const countRepeatedLetters = (word) => {
+    const letterCounts = {};
+    let repeatedCount = 0;
+
+    arrayOfStrings.split("").forEach((element) => {
+      if (letterCounts[element]) {
+        letterCounts[element]++;
       } else {
-        return `${e.brand} is affordable as the current market price is ${e.price} which is a good rate`;
+        letterCounts[letter] = 1;
       }
     });
-    return carInGarage;
+
+    for (let count of Object.values(letterCounts)) {
+      if (count > 1) {
+        repeatedCount += count;
+      }
+    }
+    return repeatedCount;
   };
-  
-  console.log(
-    citiesCensus([
-      { brand: "Toyota", price: 25000 },
-      { brand: "BMW", price: 40000 },
-      { brand: "Honda", price: 20000 }
-    ])
-  );
+};
+console.log(getRepeatedLetters(["table", "chair", "desk", "couch", "stool"]));
+/* 
+
+12. Write a function that takes an array of strings and returns the word with the least repeated letters.
+
+   Example Data:
+   javascript
+   const words = ["mouse", "keyboard", "monitor", "printer", "scanner"];
+   
+
+13. Develop a function that receives an array of strings and returns the word with the most unique letters.
+
+    Example Data:
+    javascript
+    const words = ["carrot", "broccoli", "lettuce", "spinach", "cabbage"]; */
