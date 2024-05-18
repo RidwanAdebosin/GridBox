@@ -577,8 +577,27 @@ console.log(getRepeatedLetters(["table", "chair", "desk", "couch", "stool"]));
    const words = ["mouse", "keyboard", "monitor", "printer", "scanner"];
    
 
-13. Develop a function that receives an array of strings and returns the word with the most unique letters.
+   
+   Example Data:
+   javascript
+   const words = ["carrot", "broccoli", "lettuce", "spinach", "cabbage"]; */
+   
+   
+   function sum(arr){
+     return Array.from(new Set(arr)).reduce((acc, cv) => acc + cv, 0)
+    }
+    console.log(sum([1, 2, 2, 3, 1, 2])) 
+    
+    
+    // 13. Develop a function that receives an array of strings and returns the word with the most unique letters.
 
-    Example Data:
-    javascript
-    const words = ["carrot", "broccoli", "lettuce", "spinach", "cabbage"]; */
+    // second element is not needed
+let [firstName, , title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+console.log( title ); // Consul
+
+let user = {};
+[user.name, user.surname] = "John Smith".split(' ');
+
+console.log(user.name); // John
+console.log(user.surname);
