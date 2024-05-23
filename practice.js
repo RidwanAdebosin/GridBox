@@ -591,13 +591,3 @@ console.log(getRepeatedLetters(["table", "chair", "desk", "couch", "stool"]));
     
     // 13. Develop a function that receives an array of strings and returns the word with the most unique letters.
 
-    // second element is not needed
-let [firstName, , title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
-
-console.log( title ); // Consul
-
-let user = {};
-[user.name, user.surname] = "John Smith".split(' ');
-
-console.log(user.name); // John
-console.log(user.surname);
