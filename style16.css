@@ -10,6 +10,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .box-wrapper {
@@ -55,7 +56,6 @@
 .red-box:nth-child(2) {
   background: var(--red);
   height: 7vh;
-  width: 90%;
   margin: 10px;
 }
 
@@ -65,7 +65,7 @@
 }
 
 /* responsiveness on tablet screen */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .box-wrapper {
     border: 3px solid red;
     
@@ -75,8 +75,11 @@
   .red-box:last-child {
     display: block;
   }
+
+
   .red-boxes {
-    margin: 10px;
+    /* margin: 10px; */
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: repeat(2, 1fr); */
