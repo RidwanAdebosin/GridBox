@@ -4,7 +4,6 @@
   --orange: orange;
   --lightgreen: rgb(52, 189, 52);
   --red: red;
-  --offwhite: #ffffff8e;
 }
 
 * {
@@ -18,11 +17,14 @@
   margin: 70px auto;
 }
 
+.box-wrapper * div {
+    width: 100%;
+}
+
 .blue-box {
   background: var(--blue);
-  height: 7vh;
-  width: 100%;
   margin: 5px;
+  height: 7vh;
 }
 
 .orange-box {
@@ -34,23 +36,19 @@
 
 .green-box {
   background: var(--lightgreen);
-  height: 7vh;
-  width: 100%;
   margin: 5px;
+  height: 7vh;
 }
 
 .red-box {
   background: var(--red);
-  height: 7vh;
-  width: 100%;
   margin: 5px;
+  height: 7vh;
 }
 
 .red-box:first-child,
 .red-box:nth-child(2) {
   background: var(--red);
-  height: 7vh;
-  /* margin: 10px; */
 }
 
 .red-box:nth-child(2),
@@ -65,8 +63,8 @@
     display: block;
   }
 
-  .red-box {
-    width: 100%;
+  .red-box{
+    margin-block-end: -5px;
   }
 
   .red-boxes {
@@ -84,11 +82,8 @@
     gap: 10px;
   }
 
-  .orange-box {
-    margin: 5px;
-  }
-
   .green-boxes {
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -103,6 +98,5 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-
   }
 }
