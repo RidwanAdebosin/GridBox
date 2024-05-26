@@ -590,4 +590,25 @@ console.log(getRepeatedLetters(["table", "chair", "desk", "couch", "stool"]));
     
     
     // 13. Develop a function that receives an array of strings and returns the word with the most unique letters.
+    const uniqueLetters = (arrayOfStrings) => {
+      let maxUniqueCount = 0;
+      let wordWithMaxUniqueLetters = '';
+    
+      // Iterate through each word in the array
+      arrayOfStrings.forEach(word => {
+        let uniqueLetters = new Set(word); // Set automatically keeps unique values only
+        let uniqueCount = uniqueLetters.size;
+    
+        // Check if the current word has more unique letters than the previous max
+        if (uniqueCount > maxUniqueCount) {
+          maxUniqueCount = uniqueCount;
+          wordWithMaxUniqueLetters = word;
+        }
+      });
+    
+      return wordWithMaxUniqueLetters;
+    };
+    
+    console.log(uniqueLetters(["boy", "bull", "array"]));
+    
 
